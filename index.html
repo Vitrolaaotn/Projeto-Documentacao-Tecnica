@@ -1,64 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Technical Documentation Page</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <title>Documentação em C</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- NAVBAR FORA do main -->
-  <nav id="navbar">
-    <header>Technical Documentation</header>
-    <ul>
-      <li><a href="#Section_1" class="nav-link">Section 1</a></li>
-      <li><a href="#Section_2" class="nav-link">Section 2</a></li>
-      <li><a href="#Section_3" class="nav-link">Section 3</a></li>
-      <li><a href="#Section_4" class="nav-link">Section 4</a></li>
-      <li><a href="#Section_5" class="nav-link">Section 5</a></li>
-    </ul>
+
+  <header>
+      <h1>Documentação da Linguagem C</h1>
+      <p>Guia básico de programação em C</p>
+  </header>
+
+  <nav>
+      <ul>
+          <li><a href="#intro">Introdução</a></li>
+          <li><a href="#if">If / Else</a></li>
+          <li><a href="#switch">Switch</a></li>
+          <li><a href="#loops">Loops</a></li>
+          <li><a href="#array">Arrays</a></li>
+          <li><a href="#multi">Array Multidimensional</a></li>
+      </ul>
   </nav>
 
-  <main id="main-doc">
+  <main>
 
-    <section class="main-section" id="Section_1">
-      <header>Section 1</header>
-      <p>Lorem Ipsum is simply dummy text of the printing industry.</p>
-      <p><code>Example code 1</code></p>
+    <section id="intro">
+        <h2>Introdução</h2>
+        <p>A linguagem C é uma linguagem de programação estruturada, ela é a principal linguagem de programação como base para as novas que surgiram até hoje, como o python por exemplo.</p>
     </section>
 
-    <section class="main-section" id="Section_2">
-      <header>Section 2</header>
-      <p>Lorem Ipsum is simply dummy text of the printing industry.</p>
-      <p><code>Example code 2</code></p>
+    <section id="if">
+        <h2>If / Else</h2>
+        <p>
+        As estruturas condicionais são usadas para tomar decisões dentro de um programa e conferir condições colocadas pelo desenvolvedor. Seu nome é <strong>if</strong>, que executa um bloco de código apenas se uma condição for verdadeira.
+        </p>
+
+        <p>
+        O <strong>else</strong> pode ser usado junto com o if para definir o que acontece quando a condição for falsa, ou seja, ela confere a primeira afirmação colocada pelo if e se não for verdadeira, irá executar o bloco de código seguinte, no caso, o else.
+        </p>
+        <p> 
+          Além disso, o <strong>else if</strong> pode ser usado para verificar múltiplas condições, permitindo que diferentes blocos de código sejam executados dependendo dos valores das variáveis.
+        </p>
+        <p>
+          ermitindo que diferentes ações sejam executadas dependendo dos valores das variáveis.
+        </p>
+
+    <code>
+    if (idade >= 18) {
+        printf("Maior de idade");
+    } else {
+        printf("Menor de idade");
+    }
+    </code>
     </section>
 
-    <section class="main-section" id="Section_3">
-      <header>Section 3</header>
-      <p>Lorem Ipsum is simply dummy text of the printing industry.</p>
-      <p><code>Example code 3</code></p>
-    </section>
-
-    <section class="main-section" id="Section_4">
-      <header>Section 4</header>
-      <p>Lorem Ipsum is simply dummy text of the printing industry.</p>
-      <p><code>Example code 4</code></p>
-    </section>
-
-    <section class="main-section" id="Section_5">
-      <header>Section 5</header>
-      <p>Lorem Ipsum is simply dummy text of the printing industry.</p>
-      <p><code>Example code 5</code></p>
-      <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-        <li>Item 4</li>
-        <li>Item 5</li>
-      </ul>
-    </section>
-
-  </main>
-
-</body>
-</html>
+    
