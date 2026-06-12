@@ -7,52 +7,176 @@
 </head>
 <body>
 
-  <header>
-      <h1>Documentação da Linguagem C</h1>
-      <p>Guia básico de programação em C</p>
-  </header>
+<header class="titulo">
+    <h1>Documentação da Linguagem C</h1>
+    <p>Guia básico de programação em C</p>
+</header>
 
-  <nav>
-      <ul>
-          <li><a href="#intro">Introdução</a></li>
-          <li><a href="#if">If / Else</a></li>
-          <li><a href="#switch">Switch</a></li>
-          <li><a href="#loops">Loops</a></li>
-          <li><a href="#array">Arrays</a></li>
-          <li><a href="#multi">Array Multidimensional</a></li>
-      </ul>
-  </nav>
-
-  <main>
-
-    <section id="intro">
-        <h2>Introdução</h2>
-        <p>A linguagem C é uma linguagem de programação estruturada, ela é a principal linguagem de programação como base para as novas que surgiram até hoje, como o python por exemplo.</p>
-    </section>
-
-    <section id="if">
-        <h2>If / Else</h2>
-        <p>
-        As estruturas condicionais são usadas para tomar decisões dentro de um programa e conferir condições colocadas pelo desenvolvedor. Seu nome é <strong>if</strong>, que executa um bloco de código apenas se uma condição for verdadeira.
-        </p>
-
-        <p>
-        O <strong>else</strong> pode ser usado junto com o if para definir o que acontece quando a condição for falsa, ou seja, ela confere a primeira afirmação colocada pelo if e se não for verdadeira, irá executar o bloco de código seguinte, no caso, o else.
-        </p>
-        <p> 
-          Além disso, o <strong>else if</strong> pode ser usado para verificar múltiplas condições, permitindo que diferentes blocos de código sejam executados dependendo dos valores das variáveis.
-        </p>
-        <p>
-          ermitindo que diferentes ações sejam executadas dependendo dos valores das variáveis.
-        </p>
-
-    <code>
-    if (idade >= 18) {
-        printf("Maior de idade");
-    } else {
-        printf("Menor de idade");
-    }
-    </code>
-    </section>
-
+<nav id="navbar">
     
+    <ul>
+        <header class="nav-titulo">Navegação:</header>
+        <li><a class="nav-link" href="#Introdução">Introdução</a></li>
+        <li><a class="nav-link" href="#If_Else">If Else</a></li>
+        <li><a class="nav-link" href="#Switch">Switch</a></li>
+        <li><a class="nav-link" href="#Loops">Loops</a></li>
+        <li><a class="nav-link" href="#Array">Array</a></li>
+        <li><a class="nav-link" href="#Array_Multidimensional">Array Multidimensional</a></li>
+    </ul>
+</nav>
+
+<main id="main-doc">
+
+    <section id="Introdução" class="main-section">
+        <header >Introdução</header>
+        <p>
+        A linguagem C é uma das linguagens de programação mais importantes da história. Ela é considerada uma linguagem estruturada e de baixo nível comparada a linguagens modernas, pois permite maior controle sobre o hardware.
+        </p>
+
+        <p>
+        Foi criada na década de 1970 e até hoje é muito utilizada no desenvolvimento de sistemas operacionais, programas embarcados e também no ensino de lógica de programação.
+        </p>
+
+        <p>
+        Aprender C ajuda a entender melhor como os programas funcionam internamente, sendo uma ótima base para outras linguagens.
+        </p>
+    </section>
+
+    <section id="If_Else" class="main-section">
+        <header >If Else</header>
+
+        <p>
+            As estruturas condicionais são usadas para tomar decisões dentro de um programa.
+            O <strong>if</strong> executa um bloco de código apenas se a condição for verdadeira.
+        </p>
+
+        <p>
+            O <strong>else</strong> define o que acontece quando a condição for falsa.
+        </p>
+
+        <p>
+            O <strong>else if</strong> permite verificar múltiplas condições.
+        </p>
+        <ul>
+            <li>Executa código se condição for verdadeira</li>
+            <li>Else executa se for falsa</li>
+         </ul>
+        <code class="bloco">
+        if (idade >= 18) {
+            printf("Maior de idade");
+        } else {
+            printf("Menor de idade");
+        }
+        </code>
+    </section>
+
+    <section id="Switch" class="main-section">
+        <header>Switch</header>
+
+      <p>
+        A estrutura <strong>switch</strong> é utilizada quando há várias opções possíveis para um mesmo valor. Ela torna o código mais organizado quando comparada a vários ifs encadeados.
+        </p>
+
+        <p>
+        Cada opção é representada por um <strong>case</strong>, e o comando <strong>break</strong> é usado para interromper a execução após encontrar o caso correspondente.
+        </p>
+
+        <p>
+        Também existe o <strong>default</strong>, que funciona como um caso padrão quando nenhuma das opções anteriores é atendida.
+        </p>
+        <code class="bloco">
+        switch(opcao) {
+            case 1:
+                printf("Opção 1");
+                break;
+
+            case 2:
+                printf("Opção 2");
+                break;
+
+            default:
+                printf("Inválido");
+        }
+        </code>
+    </section>
+
+    <section id="Loops" class="main-section">
+        <header>Loops</header>
+        <p>
+        Os laços de repetição são utilizados para executar um mesmo bloco de código várias vezes. Eles são muito úteis quando queremos automatizar tarefas repetitivas.
+        </p>
+
+        <p>
+        O <strong>for</strong> é geralmente usado quando sabemos quantas vezes o código deve se repetir. Já o <strong>while</strong> é usado quando a repetição depende de uma condição.
+        </p>
+
+        <p>
+        Essas estruturas ajudam a reduzir código repetido e tornam os programas mais eficientes e organizados.
+        </p>
+        <ul>
+            <li>Repetição de código</li>
+            <li>for e while são os principais</li>
+        </ul>
+        <h3>For</h3>
+        <code class="bloco">
+            for(int i = 0; i < 5; i++) {
+                printf("%d", i);
+            }
+        </code>
+
+        <h3>While</h3>
+        <code class="bloco">
+            while(x < 10) {
+                x++;
+            }
+        </code>
+    </section>
+
+    <section id="Array" class="main-section">
+        <header>Array</header>
+        <p>
+        Um array é uma estrutura de dados que permite armazenar vários valores do mesmo tipo em uma única variável.
+        </p>
+
+        <p>
+        Cada valor dentro do array é acessado por meio de um índice, que começa do zero. Isso facilita o armazenamento e a manipulação de grandes quantidades de dados.
+        </p>
+
+        <p>
+        Arrays são muito utilizados em situações onde precisamos trabalhar com listas de valores, como notas, números ou nomes.
+        </p>
+        <code class="bloco">
+            int numeros[5] = {1,2,3,4,5};
+        </code>
+        <ul>
+            <li>Armazena vários valores</li>
+            <li>Acessado por índice</li>
+        </ul>
+    </section>
+
+    <section id="Array_Multidimensional" class="main-section">
+        <header>Array Multidimensional</header>
+        <p>
+        Arrays multidimensionais são estruturas que permitem armazenar dados em mais de uma dimensão, como uma tabela ou matriz.
+        </p>
+
+        <p>
+        Eles são muito úteis para representar dados organizados em linhas e colunas, como tabelas, jogos ou sistemas mais complexos.
+        </p>
+
+        <p>
+        O acesso aos elementos é feito utilizando mais de um índice, por exemplo: matriz[linha][coluna].
+        </p>
+        <code class="bloco">
+            int matriz[2][2] = {
+                {1, 2},
+                {3, 4}
+            };
+        </code>
+    </section>
+
+</main>
+
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
